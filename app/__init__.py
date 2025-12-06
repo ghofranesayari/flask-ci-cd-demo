@@ -3,6 +3,14 @@ from flask import Flask, request
 def create_app():
     app = Flask(__name__)
 
+    @app.get("/")
+    def home():
+        # You can put anything here (HTML or JSON)
+        return {
+            "message": "Flask CI/CD demo running on AWS Elastic Beanstalk 🚀",
+            "endpoints": ["/health", "/message", "/echo"],
+        }, 200
+
     @app.get("/health")
     def health():
         return {"status": "ok"}, 200
