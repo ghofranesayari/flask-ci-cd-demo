@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghofrane · CI/CD Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top left, #f5f5ff 0, #fdfdfd 40%, #f9fafb 100%);
+            color: #111827;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem 2.8rem;
+            border-radius: 1.5rem;
+            box-shadow:
+                0 18px 45px rgba(15, 23, 42, 0.15),
+                0 0 0 1px rgba(148, 163, 184, 0.2);
+            max-width: 520px;
+            width: 100%;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(79, 70, 229, 0.06);
+            color: #4f46e5;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            margin-bottom: 1.1rem;
+        }
+
+        .pill-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            line-height: 1.3;
+            margin-bottom: 0.8rem;
+        }
+
+        h1 span {
+            background: linear-gradient(120deg, #4f46e5, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        p.lead {
+            font-size: 0.98rem;
+            color: #4b5563;
+            margin-bottom: 1.4rem;
+        }
+
+        .blockquote {
+            border-left: 3px solid #4f46e5;
+            padding-left: 0.9rem;
+            margin-bottom: 1.6rem;
+            color: #374151;
+            font-size: 0.95rem;
+        }
+
+        .blockquote strong {
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem 1.2rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        .meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .meta-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: #a855f7;
+        }
+
+        .meta-badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="pill">
+        <div class="pill-dot"></div>
+        Flask · Docker · CI/CD · AWS
+    </div>
+
+    <h1>
+        Hey, this is <span>Ghofrane</span> 👋<br>
+        Keep going — one commit at a time.
+    </h1>
+
+    <p class="lead">
+        This page is deployed through a full CI/CD pipeline:
+        every time I push to <code>main</code>, tests run, a Docker image
+        is built, and AWS Elastic Beanstalk automatically updates this app.
+    </p>
+
+    <div class="blockquote">
+        <strong>Reminder for future me:</strong>
+        You don’t have to move fast. You just have to keep moving.
+        Small, consistent steps beat random sprints.
+    </div>
+
+    <div class="meta">
+        <div class="meta-item">
+            <span class="meta-dot"></span>
+            <span>App: Flask API with HTML landing page</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-dot"></span>
+            <span>Pipeline: GitHub Actions → Docker Hub → AWS EB</span>
+        </div>
+        <span class="meta-badge">Deployed by CI/CD · Not by hand 🚀</span>
+    </div>
+</div>
+</body>
+</html>

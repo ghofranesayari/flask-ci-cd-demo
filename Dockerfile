@@ -17,3 +17,6 @@ EXPOSE 5000
 # 6. Start the app with Gunicorn
 #   app.main:app  ->  module:object (from app/main.py)
 CMD ["gunicorn", "-b", "0.0.0.0:5000", "app.main:app"]
+
+
+CMD ["python", "app/main.py"]

@@ -1,15 +1,13 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
+
 
 def create_app():
     app = Flask(__name__)
 
     @app.get("/")
     def home():
-        # You can put anything here (HTML or JSON)
-        return {
-            "message": "Flask CI/CD demo running on AWS Elastic Beanstalk 🚀",
-            "endpoints": ["/health", "/message", "/echo"],
-        }, 200
+        # This will look for app/templates/index.html
+        return render_template("index.html")
 
     @app.get("/health")
     def health():
